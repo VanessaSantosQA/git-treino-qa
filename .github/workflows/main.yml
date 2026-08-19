@@ -18,7 +18,7 @@ jobs:
         run: echo "Pipeline de QA iniciado"
 
       - name: Validar arquivo README
-        run: test -f README.txt
-
+  run: test -f ARQUIVO_INEXISTENTE.txt
+  
       - name: Finalizar
         run: echo "Pipeline executado com sucesso"
