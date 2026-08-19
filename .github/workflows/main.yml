@@ -2,9 +2,11 @@ name: Pipeline QA - Treino
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   validacao:
@@ -18,7 +20,7 @@ jobs:
         run: echo "Pipeline de QA iniciado"
 
       - name: Validar arquivo README
-  run: test -f ARQUIVO_INEXISTENTE.txt
-  
+        run: test -f ARQUIVO_INEXISTENTE.txt
+
       - name: Finalizar
         run: echo "Pipeline executado com sucesso"
